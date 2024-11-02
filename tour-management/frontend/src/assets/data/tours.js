@@ -5,7 +5,6 @@ import tourImg04 from "../images/tour-img04.jpg";
 import tourImg05 from "../images/tour-img05.jpg";
 import tourImg06 from "../images/tour-img06.jpg";
 import tourImg07 from "../images/tour-img07.jpg";
-import tourImg08 from "../images/tour-img08.jpg";
 
 const tours = [
   {
@@ -13,21 +12,13 @@ const tours = [
     title: "Westminster Bridge",
     city: "London",
     distance: 300,
-    address: "Westminster, London, UK",
+    address: "Somewhere in London",
     price: 99,
     maxGroupSize: 10,
-    desc: "Explore the iconic Westminster Bridge, offering stunning views of the River Thames and Big Ben.",
+    desc: "this is the description",
     reviews: [
       {
-        name: "John Doe",
-        rating: 4.6,
-      },
-      {
-        name: "Johnny",
-        rating: 5,
-      },
-      {
-        name: "Marianne",
+        name: "John doe",
         rating: 4.6,
       },
     ],
@@ -37,25 +28,17 @@ const tours = [
   },
   {
     id: "02",
-    title: "Pangkor Laut Resort",
-    city: "Perak",
-    distance: 250,
-    address: "Pangkor Island, Perak, Malaysia",
+    title: "Bali, Indonesia",
+    city: "Indonesia",
+    distance: 400,
+    address: "Somewhere in Indonesia",
     price: 99,
     maxGroupSize: 8,
-    desc: "A tranquil island escape with luxurious villas, tropical scenery, and pristine beaches in Perak.",
+    desc: "this is the description",
     reviews: [
       {
-        name: "Michael",
-        rating: 4.7,
-      },
-      {
-        name: "Emma",
-        rating: 4.9,
-      },
-      {
-        name: "John",
-        rating: 4.9,
+        name: "John doe",
+        rating: 4.6,
       },
     ],
     avgRating: 4.5,
@@ -63,17 +46,17 @@ const tours = [
     featured: true,
   },
   {
-    id: "06",
-    title: "Cherry Blossoms Spring",
-    city: "Kyoto",
-    distance: 450,
-    address: "Kyoto, Japan",
+    id: "03",
+    title: "Snowy Mountains, Thailand",
+    city: "Thailand",
+    distance: 500,
+    address: "Somewhere in Thailand",
     price: 99,
     maxGroupSize: 8,
-    desc: "Experience the enchanting cherry blossom season in the heart of Japan.",
+    desc: "this is the description",
     reviews: [
       {
-        name: "John Doe",
+        name: "John doe",
         rating: 4.6,
       },
       {
@@ -82,22 +65,21 @@ const tours = [
       },
     ],
     avgRating: 4.5,
-    photo: tourImg06,
+    photo: tourImg03,
     featured: true,
   },
-  
   {
     id: "04",
-    title: "Beautiful Sunrise",
-    city: "Khao Kho",
+    title: "Beautiful Sunrise, Thailand",
+    city: "Thailand",
     distance: 500,
-    address: "Phetchabun, Thailand",
+    address: "Somewhere in Thailand",
     price: 99,
     maxGroupSize: 8,
-    desc: "Witness a breathtaking sunrise from one of Thailand's most picturesque locations.",
+    desc: "this is the description",
     reviews: [
       {
-        name: "Xian",
+        name: "john doe",
         rating: 4.6,
       },
       {
@@ -111,58 +93,55 @@ const tours = [
   },
   {
     id: "05",
-    title: "Nusa Penida Adventure",
-    city: "Bali",
-    distance: 40,
-    address: "Nusa Penida, Bali, Indonesia",
+    title: "Nusa Penida Bali, Indonesia",
+    city: "Indonesia",
+    distance: 500,
+    address: "Somewhere in Indonesia",
     price: 99,
     maxGroupSize: 8,
-    desc: "Embark on an unforgettable adventure to Nusa Penida, Bali's hidden gem.",
-    reviews: [],
+    desc: "this is the description",
+    reviews: [
+      {
+        name: "John doe",
+        rating: 4.6,
+      },
+    ],
     avgRating: 4.5,
     photo: tourImg05,
     featured: false,
   },
   {
-    id: "03",
-    title: "Snowy Heights Trek",
-    city: "Pokhara",
-    distance: 200,
-    address: "Poon Hill, Annapurna Region, Nepal",
+    id: "06",
+    title: "Cherry Blossoms Spring",
+    city: "Japan",
+    distance: 500,
+    address: "Somewhere in Japan",
     price: 99,
-    maxGroupSize: 12,
-    desc: "Enjoy stunning sunrises and panoramic views of the Annapurna at Poon Hill, a must-visit for trekkers in Nepal.",
+    maxGroupSize: 8,
+    desc: "this is the description",
     reviews: [
       {
-        name: "Mahan",
-        rating: 4.8,
-      },
-      {
-        name: "Lisa",
-        rating: 4.9,
+        name: "john doe",
+        rating: 4.6,
       },
     ],
-    avgRating: 4.85,
-    photo: tourImg03,
+    avgRating: 4.5,
+    photo: tourImg06,
     featured: false,
   },
   {
     id: "07",
-    title: "Wuxi Grand Theatre ",
-    city: "Wuxi",
+    title: "Holmen Lofoten",
+    city: "Paris",
     distance: 500,
-    address: "Jiangsu, China",
+    address: "Somewhere in France",
     price: 99,
     maxGroupSize: 8,
-    desc: "Discover the stunning architecture and vibrant performances at Wuxi Grand Theatre, a cultural gem in China.",
+    desc: "this is the description",
     reviews: [
       {
-        name: "Sarah",
-        rating: 4.8,
-      },
-      {
-        name: "Josef",
-        rating: 4.9,
+        name: "John doe",
+        rating: 4.6,
       },
     ],
     avgRating: 4.5,
@@ -171,19 +150,23 @@ const tours = [
   },
   {
     id: "08",
-    title: "Point Dume Beach Escape",
-    city: "Malibu",
+    title: "Snowy Mountains, Thailand",
+    city: "Bangkok",
     distance: 500,
-    address: "Point Dume, Malibu, California",
+    address: "Somewhere in Thailand",
     price: 99,
     maxGroupSize: 8,
-    desc: "Escape to Point Dume, a beautiful beach with scenic cliffs and sandy shores.",
-    reviews: [],
+    desc: "this is the description",
+    reviews: [
+      {
+        name: "john doe",
+        rating: 4.6,
+      },
+    ],
     avgRating: 4.5,
-    photo: tourImg08,
+    photo: tourImg03,
     featured: false,
   },
 ];
 
 export default tours;
-
