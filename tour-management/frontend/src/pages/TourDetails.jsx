@@ -108,7 +108,7 @@ const TourDetails = () => {
 
                     <div className="tour__extra-details">
                       <span>
-                        <i class="ri-map-pin-2-line"></i> {city}
+                        <i class="ri-map-pin-line"></i> {city}
                       </span>
                       <span>
                         <i class="ri-road-map-line"></i> {distance} km
