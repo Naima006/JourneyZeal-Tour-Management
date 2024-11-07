@@ -42,6 +42,7 @@ const TourDetails = () => {
     try {
       if (!user || user === undefined || user === null) {
         alert("Please Sign in");
+        return;
       }
 
       const reviewObj = {
@@ -51,7 +52,7 @@ const TourDetails = () => {
       };
 
       const res = await fetch(`${BASE_URL}/review/${id}`, {
-        method: post,
+        method: "POST",
         headers: {
           "content-type": "application/json",
         },

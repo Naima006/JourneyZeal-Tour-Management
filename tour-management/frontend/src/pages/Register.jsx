@@ -28,7 +28,7 @@ const Register = () => {
 
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
-        method: "post",
+        method: "POST",
         headers: {
           "content-type": "application/json",
         },
