@@ -17,7 +17,6 @@ JourneyZeal is a full-stack tour management web application designed to help use
   - **Booking System**: Users can book tours and view their bookings.
   - **Reviews**: Users can submit reviews for tours.
   - **Search & Filter**: Tours can be searched by city, group size, and other criteria.
-  - **Role-Based Authorization**: Admins can access certain routes, while users have limited access.
 
 ## Installation
 
