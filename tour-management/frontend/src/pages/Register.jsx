@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Col, Container, Form, FormGroup, Row } from "reactstrap";
 import "../styles/login.css";
@@ -19,13 +19,22 @@ const Register = () => {
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
-  };
+  const allowedDomains = ["gmail.com", "outlook.com", "yahoo.com"];
 
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setCredentials((prev) => ({ ...prev, [id]: value }));
+  };
+  
   const handleClick = async (e) => {
     e.preventDefault();
 
+    const emailDomain = credentials.email?.split("@")[1];
+    if (emailDomain && !allowedDomains.includes(emailDomain)) {
+      alert("Please use a valid email address with one of the following domains: @gmail.com, @outlook.com, or @yahoo.com.");
+      return;
+    }
+    
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
         method: "POST",
@@ -35,9 +44,9 @@ const Register = () => {
         body: JSON.stringify(credentials),
       });
       const result = await res.json();
-
+  
       if (!res.ok) alert(result.message);
-
+  
       dispatch({ type: "REGISTER_SUCCESS" });
       navigate("/login");
     } catch (err) {
