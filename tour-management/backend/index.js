@@ -14,13 +14,13 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://journey-zeal-tour-management-frontend.vercel.app',
   credentials: true,
 };
 
-app.get("/", (req, res) => {
-    res.send("API working...");
-});
+//app.get("/", (req, res) => {
+//    res.send("API working...");
+//});
 
 mongoose.set("strictQuery", false);
 const connect = async () => {
