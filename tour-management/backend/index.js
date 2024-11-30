@@ -18,9 +18,9 @@ const corsOptions = {
   credentials: true,
 };
 
-// app.get("/", (req, res) => {
-//   res.send("api is working");
-// });
+app.get("/", (req, res) => {
+    res.send("API working...");
+});
 
 mongoose.set("strictQuery", false);
 const connect = async () => {
