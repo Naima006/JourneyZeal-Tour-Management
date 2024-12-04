@@ -16,6 +16,9 @@ const TourDetails = () => {
   const [tourRating, setTourRating] = useState(null);
   const { user } = useContext(AuthContext);
 
+  // State to handle local reviews
+  const [localReviews, setLocalReviews] = useState([]);
+
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
 
   const {
@@ -31,6 +34,11 @@ const TourDetails = () => {
   } = tour; //Destructure tour object properties
 
   const { totalRating, avgRating } = calculateAvgRating(reviews);
+
+  // Initialize local reviews when tour data is loaded
+  useEffect(() => {
+    setLocalReviews(reviews);
+  }, [reviews]);
 
   const options = { day: "numeric", month: "long", year: "numeric" };
 
@@ -65,7 +73,13 @@ const TourDetails = () => {
         return alert(result.message);
       }
 
-      alert(result.message);
+      // Update local reviews state
+      setLocalReviews((prevReviews) => [...prevReviews, result.data]);
+
+      //alert(result.message);
+      reviewMsgRef.current.value = ""; // Clear the input field
+      setTourRating(null); // Reset the rating
+
     } catch (err) {
       alert(err.message);
     }
@@ -163,7 +177,7 @@ const TourDetails = () => {
                     </Form>
 
                     <ListGroup className="user__reviews">
-                      {reviews?.map((review) => (
+                      {localReviews?.map((review) => (
                         <div className="review__item">
                           <img src={avatar} alt="" />
                           <div className="w-100">
