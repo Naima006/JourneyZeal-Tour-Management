@@ -14,7 +14,7 @@ JourneyZeal is a full-stack tour management web application designed to help use
   - **User Authentication**: Users can register, log in, and securely store passwords using bcrypt.
   - **JWT Authentication**: JSON Web Tokens (JWT) are used for secure user sessions.
   - **Tour Management**: Admins can create, update, and delete tours.
-  - **Booking System**: Users can book tours and view their bookings.
+  - **Booking System**: Users can book tours.
   - **Reviews**: Users can submit reviews for tours.
   - **Search & Filter**: Tours can be searched by city, group size, and other criteria.
   - **Role-Based Authorization**: Backend endpoints support admin functionality, no admin panel is implemented on the frontend.
